@@ -1,15 +1,13 @@
 package main;
 import java.awt.Canvas;
-import java.awt.Font;
-import java.awt.FontFormatException;
+
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-import java.io.File;
-import java.io.IOException;
+
 import javax.swing.JFrame;
 
+import entities.Things;
 import gfx.Assets;
-
 
 public class Game implements Runnable {
 	private Display d;
@@ -21,6 +19,7 @@ public class Game implements Runnable {
 	private BufferStrategy bs;
 	private Graphics g;
 	private long seconds;
+
 	private long timer;
 
 	public Game(String title, int width, int height)
@@ -34,7 +33,7 @@ public class Game implements Runnable {
     public void run(){
 
         init();
-
+        Things.init();
         seconds = 0;
         int fps = 60;
         double timepertick = 1000000000 / fps;
@@ -58,7 +57,7 @@ public class Game implements Runnable {
             }
             if(timer >= 1000000000){
                 seconds++;
-               
+              
                 d.getFrame().setTitle("fps: " + updates);
                 updates = 0;
                 timer = 0;
