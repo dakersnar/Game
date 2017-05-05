@@ -1,5 +1,6 @@
 package entities;
 
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -7,20 +8,25 @@ import java.awt.Rectangle;
 
 
 import main.RectHitbox;
-public class Projectile {
+public class BadProjectile {
 	int x;
 	int y;
-	int width=10;
-	int height=3;
+	int width;
+	int height;
 
 	int speed;
 	public RectHitbox hitbox;
-	Color shapeColor = Color.red;
-	public Projectile(int x, int y, int speed)
+	Color shapeColor = Color.orange;
+	private int direction;
+	public BadProjectile(int x, int y, int width, int height, int speed, int direction)
 	   {
 	     	this.x=x;
 	     	this.y=y;
+	     	this.width=width;
+	     	this.height=height;
 	     	this.speed=speed;
+	     	this.direction=direction;
+	     	
 	     	
 	     	
 	     	hitbox = new RectHitbox(x,y,width,height);
@@ -29,11 +35,18 @@ public class Projectile {
 
 		public void update()
 		{
-			
-			x+=speed;
-			hitbox.setX(x);
-			hitbox.setY(y);
-			
+			if(direction==1)
+			{
+				x+=speed;
+				hitbox.setX(x);
+				hitbox.setY(y);
+			}
+			if(direction==2)
+			{
+				y+=speed;
+				hitbox.setX(x);
+				hitbox.setY(y);
+			}
 			
 		}
 		
@@ -48,19 +61,12 @@ public class Projectile {
 	        g2.fill(rect);
 	        g2.draw(rect);
 	        
-	        if (Things.checkCollisions(hitbox))
-			{
-				reset();
-			}
-	        if (Things.checkDeath(hitbox))
-			{
-				reset();
-			}
+	       
 	        
 	    }
 		public void reset()
 		{
-			Things.removeProjectile(this);
+			
 		}
 		
 }

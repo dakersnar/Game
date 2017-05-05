@@ -1,10 +1,11 @@
 package main;
 
 
+
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
-import entities.Projectile;
+
 import entities.Things;
 import gfx.Assets;
 import gfx.Sound;
@@ -15,14 +16,6 @@ import gfx.Sound;
 
 public class Character{
 	
-
-
-		
-		
-		
-		
-	
-		
 		static double dy = 0;
 		static double dyinit = dy;
 		static double dx = 4;
@@ -33,16 +26,16 @@ public class Character{
 		
 		static double height=46;
 		static double width=33;
-		static double x = 10;
+		public static double x = 10;
 		static double xinit=x;
-		static double y = z-height-11;
+		public static double y = z-height-11;
 		static double yinit=y;
 
 		static String direction="R";
 		static boolean ground=false;
 		static boolean fall=true;
 		static double jump=7;
-		public static int l=0;
+		public static int l=2;
 		static int projspeed=8;
 		public static RectHitbox hb=new RectHitbox(x,y,width,height);
 		
@@ -58,10 +51,20 @@ public class Character{
 			
 		
 		public static void update(){
-			if (Things.checkDeath(hb))
+			if (Things.checkNext(hb))
 			{
+				l++;
+				Sound.playSound("res/sound/Woohoo.wav");
+				Things.reset();
+				reset();
+				
+			}
+			if (Things.checkDeath(hb))
+			{	
 				Sound.playSound("res/sound/oww.wav");
 				reset();
+				Things.reset();
+				
 			}
 			else
 			{

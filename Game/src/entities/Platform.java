@@ -13,13 +13,14 @@ public class Platform {
 	int width;
 	int height;
 	public RectHitbox hitbox;
-	Color shapeColor = Color.blue;
-	public Platform(int x, int y, int width, int height)
+	Color shapeColor;
+	public Platform(int x, int y, int width, int height, Color color)
 	   {
 	     	this.x=x;
 	     	this.y=y;
 	     	this.width=width;
 	     	this.height=height;
+	     	this.shapeColor=color;
 	     	
 	    hitbox = new RectHitbox(x,y,width,height);
 	   }

@@ -20,6 +20,8 @@ public class Assets {
 	public static BufferedImage k;
 	public static BufferedImage l;
 	public static BufferedImage spike;
+	public static BufferedImage spike2;
+	public static BufferedImage draganski;
 	
 	
 	public static void init()
@@ -29,5 +31,7 @@ public class Assets {
 		k=ImageLoader.loadimage("/textures/LEAH.png");
 		l=ImageLoader.loadimage("/textures/DREW copy.png");
 		spike=ImageLoader.loadimage("/textures/Spike2.png");
+		spike2=ImageLoader.loadimage("/textures/Spike2 copy.png");
+		draganski=ImageLoader.loadimage("/textures/draganski.png");
 	}
 }

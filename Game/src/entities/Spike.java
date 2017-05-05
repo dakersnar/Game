@@ -13,23 +13,32 @@ public class Spike {
 	int y;
 	int width;
 	int height;
+	int type;
 	public RectHitbox hitbox;
 	//Color shapeColor = Color.red;
-	public Spike(int x, int y, int width, int height)
+	public Spike(int x, int y, int width, int height, int type)
 	   {
 	     	this.x=x;
 	     	this.y=y;
 	     	this.width=width;
 	     	this.height=height;
+	     	this.type=type;
 	     	
 	    hitbox = new RectHitbox(x,y,width,height);
 	   }
 
 
 
-		// This method draws the circle
+
 		public void render(Graphics g)
 		{
-			g.drawImage(Assets.spike,x,y,width,height,null);
+			if(type==1)
+			{
+				g.drawImage(Assets.spike,x,y,width,height,null);
+			}
+			if(type==2)
+			{
+				g.drawImage(Assets.spike2,x,y,width,height,null);
+			}
 	    }
 }
