@@ -14,7 +14,7 @@ public class BadProjectile {
 	int width;
 	int height;
 
-	int speed;
+	public int speed;
 	public RectHitbox hitbox;
 	Color shapeColor = Color.orange;
 	private int direction;

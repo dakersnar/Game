@@ -35,7 +35,7 @@ public class Character{
 		static boolean ground=false;
 		static boolean fall=true;
 		static double jump=7;
-		public static int l=2;
+		public static int l=0;
 		static int projspeed=8;
 		public static RectHitbox hb=new RectHitbox(x,y,width,height);
 		

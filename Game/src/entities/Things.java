@@ -77,7 +77,7 @@ public class Things {
 		L3.add(new Platform(0,y-10,x,50,Color.blue));
 		L3.add(new Platform(-4,-100,4,y+100,Color.blue));
 		L3.add(new Platform(x,-100,4,y+100,Color.blue));
-		//L3.add(new Platform(0,-10,x,11,Color.blue));
+	
 		
 		L3.add(new Platform(50,y-100,200,20,Color.blue));
 		L3.add(new Platform(70,y-200,130,20,Color.blue));
@@ -95,7 +95,7 @@ public class Things {
 		L3.add(new Platform(x-600,y-300,300,20,Color.blue));
 		
 		
-		E3.add(new Enemy(382,0,136,228,1,11));
+		E3.add(new Enemy(382,0,136,228,1,40));
 		
 		
 		
@@ -103,6 +103,11 @@ public class Things {
 		Level lvl3= new Level(L3,S3,E3,end3);
 		
 		
+		
+		L4.add(new Platform(0,y-10,x,50,Color.blue));
+		L4.add(new Platform(-4,0,4,y,Color.blue));
+		L4.add(new Platform(x,0,4,y,Color.blue));
+		L4.add(new Platform(0,-10,x,11,Color.blue));
 		Platform end4=new Platform(45,y-555,10,10,Color.green);
 		Level lvl4= new Level(L4,S4,E4,end4);
 		
@@ -184,7 +189,7 @@ public class Things {
 			i++;
 			p.get(0).reset();
 		}
-		System.out.println(i);
+
 	}
 	
 
