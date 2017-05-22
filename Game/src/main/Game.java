@@ -18,7 +18,6 @@ public class Game implements Runnable {
 	public String title;
 	private BufferStrategy bs;
 	private Graphics g;
-	private long seconds;
 
 	private long timer;
 
@@ -34,7 +33,6 @@ public class Game implements Runnable {
 
         init();
         Things.init();
-        seconds = 0;
         int fps = 60;
         double timepertick = 1000000000 / fps;
         double delta = 0;
@@ -56,7 +54,6 @@ public class Game implements Runnable {
             delta--;
             }
             if(timer >= 1000000000){
-                seconds++;
               
                 d.getFrame().setTitle("fps: " + updates);
                 updates = 0;

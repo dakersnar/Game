@@ -24,7 +24,7 @@ public class Character{
 		
 		static double z=Launcher.y;
 		
-		static double height=46;
+		public static double height=46;
 		static double width=33;
 		public static double x = 10;
 		static double xinit=x;
@@ -118,6 +118,7 @@ public class Character{
 				if(Handler.km.isKeyPressed(KeyEvent.VK_W) && ground && fall)
 				{
 					Sound.playSound("res/sound/Boinggg.wav");
+
 					dy=-jump;
 					
 				}
@@ -126,7 +127,7 @@ public class Character{
 				{
 					if(Things.p.size()<6)
 					{
-						Sound.playSound("res/sound/pew.wav");
+						Sound.playSound("res/sound/pewnew.wav");
 						int speed=projspeed;
 						if(direction.equals("L"))
 							speed=-speed;

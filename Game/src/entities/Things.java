@@ -5,6 +5,7 @@ import java.awt.Graphics;
 
 import java.util.ArrayList;
 
+import gfx.Assets;
 import main.Character;
 import main.Launcher;
 import main.RectHitbox;
@@ -59,17 +60,44 @@ public class Things {
 		Platform end1=new Platform(45,y-555,10,10,Color.green);
 		Level lvl1= new Level(L1,S1,E1,end1);
 		lvl1.shown=true;
+	
+		
 		L2.add(new Platform(0,y-10,x,50,Color.blue));
 		L2.add(new Platform(-4,0,4,y,Color.blue));
 		L2.add(new Platform(x,0,4,y,Color.blue));
 		L2.add(new Platform(0,-10,x,11,Color.blue));
 		
-		S2.add(new Spike(700,y-40,100,30,1));
+		L2.add(new Platform(0,y-200,x-200,20,Color.blue)); 
+	
+		L2.add(new Platform(x-100,y-100,100,20,Color.blue));
 		
-		Platform end2=new Platform(500,y-100,10,10,Color.green);
+		L2.add(new Platform(0,y-300,100,20,Color.blue));
+		
+		L2.add(new Platform(x-700,y-300,300,20,Color.blue));
+		
+		
+		L2.add(new Platform(x-700,y-400,500,20,Color.blue));
+		L2.add(new Platform(x-200,y-300,200,20,Color.blue));
+		L2.add(new Platform(x-200,y-400,20,100,Color.blue));
+		
+		
+		L2.add(new Platform(0,y-500,x-200,20,Color.blue));
+	
+		
+		
+		int size=100;
+		E2.add(new Enemy(400,y-size-10,(int) (size*.6),size,2,5,200));
+		size=60;
+		E2.add(new Enemy(10,y-size-200,(int) (size*.6),size,2,5,600));
+		E2.add(new Enemy(210,y-size-300,(int) (size*.6),size,2,5,200));
+		size=300;
+		E2.add(new Enemy(750,y-size-300,(int) (size*.6),size,2,10,0));
+		
+		
+		Platform end2=new Platform(45,y-555,10,10,Color.green);
 		
 		Level lvl2= new Level(L2,S2,E2,end2);
-		lvl2.shown=true;
+		
 		
 		
 		
@@ -95,7 +123,7 @@ public class Things {
 		L3.add(new Platform(x-600,y-300,300,20,Color.blue));
 		
 		
-		E3.add(new Enemy(382,0,136,228,1,40));
+		E3.add(new Enemy(382,0,136,228,1,40,0));
 		
 		
 		
@@ -179,16 +207,20 @@ public class Things {
 		{
 			p.get(i).render(g);
 		}
+		if(Character.l==0)
+			g.drawImage(Assets.text1,200,400,197,38,null);
+		if(Character.l==1)
+			g.drawImage(Assets.text2,150,450,248,41,null);
+		if(Character.l==3)
+			g.drawImage(Assets.text4,200,200,508,140,null);
+		
+
 		
 	}
 	public static void reset() {
 		levels.get(Character.l).reset();
-		int i=0;
-		while (p.size()>0)
-		{
-			i++;
-			p.get(0).reset();
-		}
+		p.clear();
+		
 
 	}
 	

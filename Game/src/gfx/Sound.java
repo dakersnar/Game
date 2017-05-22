@@ -4,8 +4,6 @@ package gfx;
 
 import java.io.File;
 
-
-
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -17,7 +15,7 @@ public class Sound {
 
 	
 	public static void playSound(String i) {
-	    try {
+	   try {
 	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(i).getAbsoluteFile());
 	        Clip clip = AudioSystem.getClip();
 	        clip.open(audioInputStream);
@@ -26,5 +24,7 @@ public class Sound {
 	        System.out.println("Error with playing sound.");
 	        ex.printStackTrace();
 	    }
+		
+		
 	}
 }

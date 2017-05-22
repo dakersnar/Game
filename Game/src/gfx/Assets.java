@@ -3,16 +3,9 @@
 
 package gfx;
 
-import java.awt.Color;
-import java.awt.Image;
+
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.util.HashMap;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-
-//import gfx.Handler;
 
 public class Assets {
 	public static BufferedImage i;
@@ -22,6 +15,14 @@ public class Assets {
 	public static BufferedImage spike;
 	public static BufferedImage spike2;
 	public static BufferedImage draganski;
+	public static BufferedImage docVR;
+	public static BufferedImage docVL;
+	public static BufferedImage text1;
+	public static BufferedImage text2;
+	public static BufferedImage text4;
+
+
+	
 	
 	
 	public static void init()
@@ -33,5 +34,14 @@ public class Assets {
 		spike=ImageLoader.loadimage("/textures/Spike2.png");
 		spike2=ImageLoader.loadimage("/textures/Spike2 copy.png");
 		draganski=ImageLoader.loadimage("/textures/draganski.png");
+		docVR=ImageLoader.loadimage("/textures/docv copy.png");
+		docVL=ImageLoader.loadimage("/textures/docv.png");
+		text1=ImageLoader.loadimage("/textures/lvl1.png");
+		text2=ImageLoader.loadimage("/textures/lvl2.png");
+		text4=ImageLoader.loadimage("/textures/lvl4.png");
+
+
+		
+		
 	}
 }

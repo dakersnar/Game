@@ -64,9 +64,6 @@ public class BadProjectile {
 	       
 	        
 	    }
-		public void reset()
-		{
-			
-		}
+		
 		
 }

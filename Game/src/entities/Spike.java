@@ -1,9 +1,7 @@
 package entities;
 
-import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
+
 
 import gfx.Assets;
 import main.RectHitbox;
@@ -15,8 +13,7 @@ public class Spike {
 	int height;
 	int type;
 	public RectHitbox hitbox;
-	//Color shapeColor = Color.red;
-	public Spike(int x, int y, int width, int height, int type)
+		public Spike(int x, int y, int width, int height, int type)
 	   {
 	     	this.x=x;
 	     	this.y=y;

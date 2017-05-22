@@ -3,7 +3,6 @@ package entities;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-import main.Character;
 import main.Phase2;
 import main.RectHitbox;
 
@@ -52,12 +51,21 @@ public class Level {
 		{
 			if(e.dead==false)
 			{
+				
 				if(hb.collide(e.hitbox))
 				{
 					e.hit();
 					return true;
 				}
 			}
+		}
+		for(BadProjectile p:Enemy.p)
+		{
+			if(hb.collide(p.hitbox))
+			{
+				return true;
+			}
+			
 		}
 		for(BadProjectile p:Phase2.p)
 		{
