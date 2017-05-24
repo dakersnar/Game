@@ -51,6 +51,7 @@ public class Character{
 			
 		
 		public static void update(){
+			
 			if (Things.checkNext(hb))
 			{
 				l++;

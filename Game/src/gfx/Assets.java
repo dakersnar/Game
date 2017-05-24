@@ -27,6 +27,7 @@ public class Assets {
 	
 	public static void init()
 	{
+		
 		i=ImageLoader.loadimage("/textures/DREW.png");
 		j=ImageLoader.loadimage("/textures/IMG_4845.jpg");
 		k=ImageLoader.loadimage("/textures/LEAH.png");
